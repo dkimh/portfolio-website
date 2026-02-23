@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-const R2 = "https://pub-ba89044168544435870d953548f2dc07.r2.dev";
+const R2 = process.env.NEXT_PUBLIC_R2_BASE ?? "";
 const FLOW_IMAGES = [
   `${R2}/dgen-xr/4-ideation/user%20flow%20component/flow-1.png`,
   `${R2}/dgen-xr/4-ideation/user%20flow%20component/flow-2.png`,

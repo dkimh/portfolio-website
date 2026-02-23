@@ -7,7 +7,7 @@ import StickyAside from "../../components/StickyAside";
 import PasswordGate from "../../components/PasswordGate";
 
 // CDN assets from Cloudflare R2
-const R2 = "https://pub-ba89044168544435870d953548f2dc07.r2.dev";
+const R2 = process.env.NEXT_PUBLIC_R2_BASE ?? "";
 const THUMBNAIL = `${R2}/dgen-xr/DGEN%20thumbnail.png`;
 const IMG_DART = `${R2}/dgen-xr/3-research/DART%201.png`;
 const IMG_DGEN380 = `${R2}/dgen-xr/3-research/DGEN%20380%201.png`;

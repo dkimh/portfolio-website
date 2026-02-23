@@ -4,7 +4,7 @@ import FooterCompact from "../../components/FooterCompact";
 import StickyAside from "../../components/StickyAside";
 
 // CDN assets from Cloudflare R2
-const R2 = "https://pub-ba89044168544435870d953548f2dc07.r2.dev";
+const R2 = process.env.NEXT_PUBLIC_R2_BASE ?? "";
 const THUMBNAIL = `${R2}/suits/SUITS%20thumbnail.png`;
 const VID_ADAPTIVE = `${R2}/suits/2-solution/1.%20Adaptive%20Visibility.mp4`;
 const VID_LOW_COGNITIVE = `${R2}/suits/2-solution/2.%20Low-Cognitive%20Load%20Interface.mp4`;

@@ -5,6 +5,8 @@ import Navigation from "./components/Navigation";
 import Clock from "./components/Clock";
 import Footer from "./components/Footer";
 
+const R2 = process.env.NEXT_PUBLIC_R2_BASE ?? "";
+
 const ASSETS = {
   nasaIcon: "/work/nasa-icon.svg",
   logoMark: "/work/logo-mark.svg",
@@ -31,8 +33,8 @@ const projects: Project[] = [
     description: "Visual AI workflow builder enabling researchers to automate daily tasks.",
     year: "2026",
     thumbnailBg: "#d4e7de",
-    thumbnailLogo: "https://pub-ba89044168544435870d953548f2dc07.r2.dev/morphmind/morphmind-logo.svg",
-    thumbnailHover: "https://pub-ba89044168544435870d953548f2dc07.r2.dev/morphmind/morphmind-prototype.png",
+    thumbnailLogo: `${R2}/morphmind/morphmind-logo.svg`,
+    thumbnailHover: `${R2}/morphmind/morphmind-prototype.png`,
     comingSoon: true,
   },
   {
@@ -41,7 +43,7 @@ const projects: Project[] = [
     description:
       "XR platform simulates turbofan engine acoustics for research and training.",
     year: "2025",
-    thumbnail: "https://pub-ba89044168544435870d953548f2dc07.r2.dev/work/project-DGEN-XR-thumbnail.mp4",
+    thumbnail: `${R2}/work/project-DGEN-XR-thumbnail.mp4`,
     href: "/works/dgen-xr",
   },
   {
@@ -50,7 +52,7 @@ const projects: Project[] = [
     description:
       "An AR navigation system that assists astronauts during Martian surface spacewalks",
     year: "2024",
-    thumbnail: "https://pub-ba89044168544435870d953548f2dc07.r2.dev/work/project-RISD S.U.I.T.S-thumbnail.mp4",
+    thumbnail: `${R2}/work/project-RISD S.U.I.T.S-thumbnail.mp4`,
     href: "/works/risd-suits",
   },
   {
@@ -59,7 +61,7 @@ const projects: Project[] = [
     description:
       "An app that helps patients compare medication prices from local pharmacies.",
     year: "2023",
-    thumbnail: "https://pub-ba89044168544435870d953548f2dc07.r2.dev/work/project-Veriprix-thumbnail.png",
+    thumbnail: `${R2}/work/project-Veriprix-thumbnail.png`,
     href: "/works/veriprix",
   },
   {
@@ -68,7 +70,7 @@ const projects: Project[] = [
     description:
       "A compact first-aid dispenser for quick access to ointments and bandages.",
     year: "2023",
-    thumbnail: "https://pub-ba89044168544435870d953548f2dc07.r2.dev/work/project-Easyaid-thumbnail.gif",
+    thumbnail: `${R2}/work/project-Easyaid-thumbnail.gif`,
     href: "/works/easyaid",
   },
 ];
