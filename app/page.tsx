@@ -8,9 +8,9 @@ import Footer from "./components/Footer";
 const R2 = process.env.NEXT_PUBLIC_R2_BASE ?? "";
 
 const ASSETS = {
-  nasaIcon: "/work/nasa-icon.svg",
-  logoMark: "/work/logo-mark.svg",
-  logoFull: "/work/logo-full.svg",
+  nasaIcon: `${R2}/work/nasa-icon.svg`,
+  logoMark: `${R2}/work/logo-mark.svg`,
+  logoFull: `${R2}/work/logo-full.svg`,
 };
 
 interface Project {

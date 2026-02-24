@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-const LOGO_FULL = "/work/logo-full.svg";
+const R2 = process.env.NEXT_PUBLIC_R2_BASE ?? "";
+const LOGO_FULL = `${R2}/work/logo-full.svg`;
 
 export default function Footer() {
   return (
