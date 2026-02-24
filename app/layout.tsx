@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono, Rethink_Sans } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "./components/CustomCursor";
+import { Analytics } from "@vercel/analytics/next";
 
 const ibmPlexMono = IBM_Plex_Mono({
   variable: "--font-ibm-plex-mono",
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <CustomCursor />
         {children}
+        <Analytics />
       </body>
     </html>
   );
