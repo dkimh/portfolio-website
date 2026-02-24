@@ -72,7 +72,7 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-3">
                 <SectionHeading>information</SectionHeading>
                 <div className="flex gap-[30px]">
                   <InfoLink href="https://docs.google.com/document/d/1vXe61rZjFaoU67SHH7bGqTfKm5sxgim1nMUf3z_ILto/edit?usp=sharing" label="resume" />
@@ -82,7 +82,7 @@ export default function About() {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-7">
+              <div className="flex flex-col gap-5">
                 <SectionHeading>experiences</SectionHeading>
                 <Entry
                   name="MorphMind AI"
@@ -96,7 +96,7 @@ export default function About() {
                 />
               </div>
 
-              <div className="flex flex-col gap-7">
+              <div className="flex flex-col gap-5">
                 <SectionHeading>awards</SectionHeading>
                 <Entry
                   name="NASA SUITS Finalists"
