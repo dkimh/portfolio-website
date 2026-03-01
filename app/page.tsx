@@ -20,6 +20,8 @@ interface Project {
   year: string;
   thumbnail?: string;
   thumbnailBg?: string;
+  thumbnailBorder?: string;
+  thumbnailContain?: boolean;
   thumbnailLogo?: string;
   thumbnailHover?: string;
   href?: string;
@@ -73,10 +75,21 @@ const projects: Project[] = [
     thumbnail: `${R2}/work/project-Easyaid-thumbnail.gif`,
     href: "/works/easyaid",
   },
+  {
+    name: "BlockType",
+    category: "Graphic Design",
+    description: "Typography built from five modular components.",
+    year: "2024",
+    thumbnail: `${R2}/typography/thumbnail.png`,
+    thumbnailBg: "#ffffff",
+    thumbnailBorder: "#58585a",
+    thumbnailContain: true,
+    href: "/works/typography",
+  },
 ];
 
 
-function ProjectCard({ name, category, description, year, thumbnail, thumbnailBg, thumbnailLogo, thumbnailHover, href, comingSoon }: Project) {
+function ProjectCard({ name, category, description, year, thumbnail, thumbnailBg, thumbnailBorder, thumbnailContain, thumbnailLogo, thumbnailHover, href, comingSoon }: Project) {
   const isVideo = thumbnail?.endsWith(".mp4");
 
   const handleMouseEnter = () =>
@@ -99,6 +112,16 @@ function ProjectCard({ name, category, description, year, thumbnail, thumbnailBg
           >
             <source src={thumbnail} type="video/mp4" />
           </video>
+        </div>
+      ) : thumbnail && thumbnailContain ? (
+        <div
+          className="aspect-[592/444] w-full rounded-[4px] overflow-hidden relative"
+          style={{
+            backgroundColor: thumbnailBg ?? "#ffffff",
+            border: thumbnailBorder ? `1px solid ${thumbnailBorder}` : undefined,
+          }}
+        >
+          <Image src={thumbnail} alt={name} fill className="object-contain transition-[filter] duration-300 group-hover:brightness-75" sizes="(min-width: 768px) 50vw, 100vw" />
         </div>
       ) : thumbnail ? (
         <div className="aspect-[592/444] w-full rounded-[4px] overflow-hidden relative">

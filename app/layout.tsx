@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   title: "Danielle Kim — Product Designer",
   description:
     "Portfolio of Danielle Kim, product designer passionate about exploring the intersection of technology, design, and human experience.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
